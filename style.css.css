@@ -1,0 +1,156 @@
+:root {
+  --brand: #0b6efd;
+  --muted: #666;
+  --bg: #f7f9fc;
+  --container-width: 1100px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin: 0;
+  color: #222;
+  background: var(--bg);
+  line-height: 1.5
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1rem
+}
+
+.site-header {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .06);
+  position: sticky;
+  top: 0;
+  z-index: 20
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.site-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  font-size: 1.4rem
+}
+
+.hero {
+  background: linear-gradient(135deg, #e6f0ff 0%, #fff 100%);
+  padding: 3.5rem 0;
+  text-align: center
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem
+}
+
+.hero p {
+  margin: 0 0 1rem;
+  color: var(--muted)
+}
+
+.btn {
+  display: inline-block;
+  padding: .6rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none
+}
+
+.section {
+  padding: 2rem 0
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
+}
+
+.contact-form {
+  display: grid;
+  gap: .5rem;
+  max-width: 640px
+}
+
+.contact-form label {
+  display: block;
+  font-size: .9rem;
+  color: var(--muted)
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px
+}
+
+.form-msg {
+  color: green;
+  margin-top: .5rem
+}
+
+.site-footer {
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem
+}
+
+@media (max-width:800px) {
+  .grid {
+    grid-template-columns: 1fr
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    right: 1rem;
+    top: 64px;
+    padding: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .08)
+  }
+
+  .nav-toggle {
+    display: block
+  }
+
+  .site-header .container {
+    position: relative
+  }
+}

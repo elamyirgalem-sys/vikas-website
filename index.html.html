@@ -1,0 +1,2039 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Vikas International School — Inspiring Excellence. Building Character. Shaping the Future.">
+  <title>Vikas International School</title>
+
+  <style>
+    :root {
+      --navy: #071a3a;
+      --navy2: #0d2b5b;
+      --gold: #f4c542;
+      --gold2: #ffd968;
+      --white: #ffffff;
+      --light: #f5f7fb;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e7ebf2;
+      --shadow: 0 18px 50px rgba(7, 26, 58, .10);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 26, 58, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .09);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 19px;
+    }
+
+    .brand strong {
+      font-size: 16px;
+      letter-spacing: .8px;
+      line-height: 1.1
+    }
+
+    .brand span {
+      display: block;
+      font-size: 10px;
+      color: #bfc9da;
+      letter-spacing: 1.5px;
+      margin-top: 3px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      color: #e9eef8;
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .nav-links a {
+      transition: .25s
+    }
+
+    .nav-links a:hover {
+      color: var(--gold)
+    }
+
+    .nav-cta {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy) !important;
+      font-weight: 800 !important;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 760px;
+      padding: 150px 0 90px;
+      background:
+        linear-gradient(105deg, rgba(7, 26, 58, .98) 0%, rgba(7, 26, 58, .91) 46%, rgba(7, 26, 58, .40) 100%),
+        url("school.jpg") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: linear-gradient(transparent, var(--white));
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(244, 197, 66, .12);
+      border: 1px solid rgba(244, 197, 66, .4);
+      color: var(--gold2);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 24px
+    }
+
+    .hero h1 span {
+      color: var(--gold)
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      color: #dbe3f0;
+      margin-bottom: 32px
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 13px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy)
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px)
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, .3);
+      color: #fff;
+      background: rgba(255, 255, 255, .07)
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 52px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 27px;
+      color: var(--gold)
+    }
+
+    .stat small {
+      color: #c5cede
+    }
+
+    /* GENERAL */
+    section {
+      padding: 95px 0
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 45px
+    }
+
+    .label {
+      color: #8b6b00;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 9px
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+      margin-bottom: 14px
+    }
+
+    .section-head p {
+      color: var(--muted)
+    }
+
+    .light {
+      background: var(--light)
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 55px;
+      align-items: center
+    }
+
+    .about-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover
+    }
+
+    .photo-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 27px
+    }
+
+    .feature {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff
+    }
+
+    .feature b {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px
+    }
+
+    .feature span {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(7, 26, 58, .05);
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow)
+    }
+
+    .card:hover:before {
+      transform: scaleX(1)
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: #eef3fb;
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      color: var(--navy);
+      margin-bottom: 7px
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    /* DARK FEATURE */
+    .dark-section {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .dark-section h2 {
+      color: #fff
+    }
+
+    .dark-section .section-head p {
+      color: #bfc9da
+    }
+
+    .dark-section .card {
+      background: #102b57;
+      border-color: rgba(255, 255, 255, .09)
+    }
+
+    .dark-section .card h3 {
+      color: #fff
+    }
+
+    .dark-section .card p {
+      color: #bfc9da
+    }
+
+    .dark-section .icon {
+      background: rgba(244, 197, 66, .12);
+      color: var(--gold)
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 190px;
+      gap: 14px
+    }
+
+    .gallery-item {
+      border: 0;
+      padding: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: #dfe5ef;
+    }
+
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .4s
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06)
+    }
+
+    .gallery-item .overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 35px 16px 15px;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+      font-weight: 700;
+    }
+
+    /* ADMISSIONS */
+    .admission {
+      background: linear-gradient(120deg, var(--navy), var(--navy2));
+      border-radius: 30px;
+      padding: 55px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .admission:after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border: 1px solid rgba(244, 197, 66, .25);
+      border-radius: 50%;
+      right: -80px;
+      top: -100px;
+    }
+
+    .admission h2 {
+      color: #fff;
+      max-width: 600px
+    }
+
+    .admission p {
+      color: #cbd5e5;
+      max-width: 620px
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 28px
+    }
+
+    .contact-info,
+    .form-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(7, 26, 58, .04)
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 15px;
+      margin: 21px 0
+    }
+
+    .contact-row .icon {
+      flex: 0 0 45px;
+      width: 45px;
+      height: 45px;
+      margin: 0
+    }
+
+    .contact-row b {
+      display: block;
+      color: var(--navy)
+    }
+
+    .contact-row span {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+      background: #fbfcfe;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #9eb2d3;
+      box-shadow: 0 0 0 3px rgba(40, 85, 145, .08)
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical
+    }
+
+    .form-message {
+      grid-column: 1/-1;
+      font-size: 14px;
+      font-weight: 700;
+      display: none
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041329;
+      color: #bdc8d9;
+      padding: 55px 0 25px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 35px
+    }
+
+    footer h3 {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 15px
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px
+    }
+
+    footer a {
+      display: block;
+      margin: 9px 0;
+      transition: .2s
+    }
+
+    footer a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      margin-top: 35px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 10, 24, .88);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .lightbox.open {
+      display: flex
+    }
+
+    .lightbox img {
+      max-height: 85vh;
+      max-width: 92vw;
+      border-radius: 15px
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #fff;
+      background: none;
+      border: 0;
+      font-size: 38px;
+      cursor: pointer
+    }
+
+    #topBtn {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 900;
+      cursor: pointer;
+      display: none;
+      z-index: 900;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .2)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s, transform .7s
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(max-width:900px) {
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 6%;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 10px
+      }
+
+      .nav-cta {
+        text-align: center
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .admission {
+        flex-direction: column;
+        align-items: flex-start
+      }
+    }
+
+    @media(max-width:620px) {
+      .nav {
+        height: 68px
+      }
+
+      .nav-links {
+        top: 68px
+      }
+
+      .hero {
+        min-height: 720px;
+        padding-top: 120px
+      }
+
+      h1 {
+        letter-spacing: -2px
+      }
+
+      .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap
+      }
+
+      section {
+        padding: 70px 0
+      }
+
+      .cards,
+      .features,
+      .footer-grid,
+      form {
+        grid-template-columns: 1fr
+      }
+
+      .field.full {
+        grid-column: auto
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 150px
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2
+      }
+
+      .admission {
+        padding: 35px 25px
+      }
+
+      .about-photo img {
+        height: 390px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <div class="brand-mark"><img src="./images.jpg"></div>
+        <div>
+          <strong>VIKAS INTERNATIONAL</strong>
+          <span>SCHOOL • KAMPALA</span>
+        </div>
+
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#academics">Academics</a>
+        <a href="#life">Student Life</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#contact" class="nav-cta">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container hero-content reveal show">
+        <div class="eyebrow">Cambridge International Education</div>
+        <h1>Inspiring <span>Excellence.</span><br>Building Character.</h1>
+        <p>
+          A learning community where academic excellence, creativity, discipline,
+          leadership and personal development prepare students for a changing world.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#about">Explore Our School →</a>
+          <a class="btn btn-outline" href="#contact">Get in Touch</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat"><strong>01</strong><small>Academic Excellence</small></div>
+          <div class="stat"><strong>02</strong><small>Character &amp; Leadership</small></div>
+          <div class="stat"><strong>03</strong><small>Future Focused</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-photo reveal show">
+          <img src="school.jpg" alt="Vikas International School campus">
+          <div class="photo-tag">Vikas International School</div>
+        </div>
+
+        <div class="reveal show">
+          <div class="label">Who we are</div>
+          <h2>A school built for confident, capable learners.</h2>
+          <p>
+            Vikas International School is committed to creating a supportive environment
+            where students can develop knowledge, skills, character and confidence.
+            Our approach combines strong academics with activities that help students
+            discover their interests and leadership potential.
+          </p>
+
+          <div class="features">
+            <div class="feature"><b>Our Mission</b><span>Develop knowledgeable, disciplined and responsible
+                learners.</span></div>
+            <div class="feature"><b>Our Vision</b><span>Prepare students to make a positive impact in the future.</span>
+            </div>
+            <div class="feature"><b>Our Values</b><span>Integrity, respect, excellence, creativity and
+                leadership.</span></div>
+            <div class="feature"><b>Our Community</b><span>A welcoming environment for learning and personal
+                growth.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="academics">
+      <div class="container">
+        <div class="section-head reveal show">
+          <div class="label">Learning</div>
+          <h2>Strong foundations. Wider possibilities.</h2>
+          <p>Explore key learning areas designed to develop knowledge, problem-solving and creativity. You are to welcom
+            to come to school</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal show">
+            <div class="icon">∑</div>
+            <h3>Mathematics</h3>
+            <p>Build logical thinking, problem-solving and confident mathematical reasoning.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">⚗</div>
+            <h3>Sciences</h3>
+            <p>Discover the world through practical investigation, evidence and scientific thinking.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">⌨</div>
+            <h3>ICT</h3>
+            <p>Develop digital skills, creativity, computational thinking and responsible technology use.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">A</div>
+            <h3>Languages</h3>
+            <p>Strengthen communication, reading, writing and appreciation of language.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">◎</div>
+            <h3>Humanities</h3>
+            <p>Understand people, societies, places, history and the world around us.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">⚽</div>
+            <h3>Physical Education</h3>
+            <p>Develop fitness, teamwork, discipline, confidence and sporting ability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="life">
+      <div class="container">
+        <div class="section-head reveal show">
+          <div class="label">Beyond the classroom</div>
+          <h2>Discover. Participate. Lead.</h2>
+          <p>Student life gives learners opportunities to explore interests, work with others and build confidence.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal show">
+            <div class="icon">⚽</div>
+            <h3>Football</h3>
+            <p>Teamwork, discipline and competitive sporting development.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">🏀</div>
+            <h3>Basketball</h3>
+            <p>Build coordination, fitness and teamwork through sport.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">♫</div>
+            <h3>Music</h3>
+            <p>Explore musical creativity, performance and expression.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">★</div>
+            <h3>Drama</h3>
+            <p>Grow confidence, communication and creative expression.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">✎</div>
+            <h3>Art</h3>
+            <p>Turn ideas into creative work through imagination and design.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">⌘</div>
+            <h3>Computer Club</h3>
+            <p>Explore technology, coding and digital creativity.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">📖</div>
+            <h3>Reading</h3>
+            <p>Develop curiosity, vocabulary and a lifelong love of learning.</p>
+          </article>
+          <article class="card reveal show">
+            <div class="icon">♜</div>
+            <h3>Leadership</h3>
+            <p>Encourage responsibility, service and positive decision-making.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal show">
+          <div class="label">School moments</div>
+          <h2>Life at Vikas.</h2>
+          <p>Replace these sample images with your school's real activity and campus photos.</p>
+        </div>
+
+        <div class="gallery">
+          <button class="gallery-item reveal show" data-image="school.jpg" aria-label="Open school image">
+            <img src="school.jpg" alt="Vikas International School">
+            <div class="overlay">Our School</div>
+          </button>
+          <button class="gallery-item reveal show" data-image="school.jpg" aria-label="Open activity image">
+            <img src="school.jpg" alt="School activity">
+            <div class="overlay">Learning</div>
+          </button>
+          <button class="gallery-item reveal show" data-image="school.jpg" aria-label="Open community image">
+            <img src="school.jpg" alt="School community">
+            <div class="overlay">Community</div>
+          </button>
+          <button class="gallery-item reveal show" data-image="school.jpg" aria-label="Open school image">
+            <img src="school.jpg" alt="School">
+            <div class="overlay">Campus</div>
+          </button>
+          <button class="gallery-item reveal show" data-image="school.jpg" aria-label="Open school image">
+            <img src="school.jpg" alt="School">
+            <div class="overlay">Students</div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="admissions">
+      <div class="container">
+        <div class="admission reveal show">
+          <div>
+            <div class="label" style="color:var(--gold2)">Admissions</div>
+            <h2>Start your Vikas journey.</h2>
+            <p>Learn more about our school, admissions process and how to get in touch with the admissions team.</p>
+          </div>
+          <button class="btn btn-primary" id="applyBtn">Apply Now →</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal show">
+          <div class="label">Contact</div>
+          <h2>We'd love to hear from you.</h2>
+          <p>Use the details below or send a message through the form.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal show">
+            <div class="contact-row">
+              <div class="icon">⌖</div>
+              <div><b>Location</b><span>Kampala, Uganda</span></div>
+            </div>
+            <div class="contact-row">
+              <div class="icon">☎</div>
+              <div><b>Phone</b><span>+256 752 433171</span></div>
+            </div>
+            <div class="contact-row">
+              <div class="icon">@</div>
+              <div><b>Email</b><span>vikasinternationalschoolug@gmail.com</span></div>
+            </div>
+            <div class="contact-row">
+              <div class="icon">◷</div>
+              <div><b>School Hours</b><span>Monday – Friday</span></div>
+            </div>
+          </div>
+
+          <div class="form-box reveal show">
+            <form id="contactForm">
+              <div class="field"><label for="name">Name</label><input id="name" required="" placeholder="Your name">
+              </div>
+              <div class="field"><label for="email">Email</label><input id="email" type="email" required=""
+                  placeholder="you@example.com"></div>
+              <div class="field"><label for="phone">Phone</label><input id="phone" placeholder="+256..."></div>
+              <div class="field"><label for="subject">Subject</label><input id="subject" placeholder="How can we help?">
+              </div>
+              <div class="field full"><label for="message">Message</label><textarea id="message" required=""
+                  placeholder="Write your message..."></textarea></div>
+              <div class="field full"><button class="btn btn-primary" type="submit">Send Message →</button></div>
+              <div class="form-message" id="formMessage"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#home" class="brand">
+            <div class="brand-mark">V</div>
+
+            <div><strong>VIKAS INTERNATIONAL</strong><span>SCHOOL • KAMPALA</span></div>
+          </a>
+          <p style="margin-top:18px">Inspiring Excellence. Building Character. Shaping the Future.</p>
+        </div>
+        <div>
+          <h3>Explore</h3><a href="#about">About</a><a href="#academics">Academics</a><a href="#life">Student Life</a><a
+            href="#gallery">Gallery</a>
+        </div>
+        <div>
+          <h3>Admissions</h3><a href="#admissions">Why Vikas</a><a href="#contact">Contact Us</a><a
+            href="#contact">Request Information</a>
+        </div>
+        <div>
+          <h3>Connect</h3><a href="#contact">Phone</a><a href="#contact">Email</a><a href="#contact">Kampala, Uganda</a>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Vikas International School. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="close-lightbox" id="closeLightbox" aria-label="Close image">×</button>
+    <img id="lightboxImg" src="school.jpg" alt="School gallery image">
+  </div>
+
+  <button id="topBtn" aria-label="Back to top" style="display: block;">↑</button>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuBtn.textContent = navLinks.classList.contains("active") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+
+    document.querySelectorAll(".gallery-item").forEach(item => {
+      item.addEventListener("click", () => {
+        lightboxImg.src = item.dataset.image;
+        lightbox.classList.add("open");
+      });
+    });
+
+    document.getElementById("closeLightbox").addEventListener("click", () => {
+      lightbox.classList.remove("open");
+    });
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) lightbox.classList.remove("open");
+    });
+
+    document.getElementById("applyBtn").addEventListener("click", () => {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        document.getElementById("subject").value = "Admissions enquiry";
+      }, 500);
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const msg = document.getElementById("formMessage");
+      msg.style.display = "block";
+      msg.textContent = "Thank you! Your message has been prepared successfully. This demo form does not send messages to a server yet.";
+      e.target.reset();
+    });
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+      topBtn.style.display = window.scrollY > 500 ? "block" : "none";
+    });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Vikas International School — Inspiring Excellence. Building Character. Shaping the Future.">
+  <title>Vikas International School</title>
+
+  <style>
+    :root {
+      --navy: #071a3a;
+      --navy2: #0d2b5b;
+      --gold: #f4c542;
+      --gold2: #ffd968;
+      --white: #ffffff;
+      --light: #f5f7fb;
+      --text: #172033;
+      --muted: #667085;
+      --border: #e7ebf2;
+      --shadow: 0 18px 50px rgba(7, 26, 58, .10);
+      --radius: 22px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    .container {
+      width: min(1160px, 92%);
+      margin: auto
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7, 26, 58, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, .09);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--gold);
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 19px;
+    }
+
+    .brand strong {
+      font-size: 16px;
+      letter-spacing: .8px;
+      line-height: 1.1
+    }
+
+    .brand span {
+      display: block;
+      font-size: 10px;
+      color: #bfc9da;
+      letter-spacing: 1.5px;
+      margin-top: 3px
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      color: #e9eef8;
+      font-size: 14px;
+      font-weight: 600
+    }
+
+    .nav-links a {
+      transition: .25s
+    }
+
+    .nav-links a:hover {
+      color: var(--gold)
+    }
+
+    .nav-cta {
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy) !important;
+      font-weight: 800 !important;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 760px;
+      padding: 150px 0 90px;
+      background:
+        linear-gradient(105deg, rgba(7, 26, 58, .98) 0%, rgba(7, 26, 58, .91) 46%, rgba(7, 26, 58, .40) 100%),
+        url("school.jpg") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 120px;
+      background: linear-gradient(transparent, var(--white));
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 13px;
+      border-radius: 999px;
+      background: rgba(244, 197, 66, .12);
+      border: 1px solid rgba(244, 197, 66, .4);
+      color: var(--gold2);
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -3px;
+      margin-bottom: 24px
+    }
+
+    .hero h1 span {
+      color: var(--gold)
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      color: #dbe3f0;
+      margin-bottom: 32px
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 13px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: .25s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy)
+    }
+
+    .btn-primary:hover {
+      background: var(--gold2);
+      transform: translateY(-2px)
+    }
+
+    .btn-outline {
+      border-color: rgba(255, 255, 255, .3);
+      color: #fff;
+      background: rgba(255, 255, 255, .07)
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 52px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 27px;
+      color: var(--gold)
+    }
+
+    .stat small {
+      color: #c5cede
+    }
+
+    /* GENERAL */
+    section {
+      padding: 95px 0
+    }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 45px
+    }
+
+    .label {
+      color: #8b6b00;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 9px
+    }
+
+    h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: var(--navy);
+      margin-bottom: 14px
+    }
+
+    .section-head p {
+      color: var(--muted)
+    }
+
+    .light {
+      background: var(--light)
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 55px;
+      align-items: center
+    }
+
+    .about-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      position: relative
+    }
+
+    .about-photo img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover
+    }
+
+    .photo-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 14px 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 27px
+    }
+
+    .feature {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff
+    }
+
+    .feature b {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px
+    }
+
+    .feature span {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(7, 26, 58, .05);
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: var(--shadow)
+    }
+
+    .card:hover:before {
+      transform: scaleX(1)
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 15px;
+      background: #eef3fb;
+      color: var(--navy);
+      display: grid;
+      place-items: center;
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 19px;
+      color: var(--navy);
+      margin-bottom: 7px
+    }
+
+    .card p {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    /* DARK FEATURE */
+    .dark-section {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .dark-section h2 {
+      color: #fff
+    }
+
+    .dark-section .section-head p {
+      color: #bfc9da
+    }
+
+    .dark-section .card {
+      background: #102b57;
+      border-color: rgba(255, 255, 255, .09)
+    }
+
+    .dark-section .card h3 {
+      color: #fff
+    }
+
+    .dark-section .card p {
+      color: #bfc9da
+    }
+
+    .dark-section .icon {
+      background: rgba(244, 197, 66, .12);
+      color: var(--gold)
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 190px;
+      gap: 14px
+    }
+
+    .gallery-item {
+      border: 0;
+      padding: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      background: #dfe5ef;
+    }
+
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .4s
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06)
+    }
+
+    .gallery-item .overlay {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 35px 16px 15px;
+      color: #fff;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .7));
+      font-weight: 700;
+    }
+
+    /* ADMISSIONS */
+    .admission {
+      background: linear-gradient(120deg, var(--navy), var(--navy2));
+      border-radius: 30px;
+      padding: 55px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .admission:after {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border: 1px solid rgba(244, 197, 66, .25);
+      border-radius: 50%;
+      right: -80px;
+      top: -100px;
+    }
+
+    .admission h2 {
+      color: #fff;
+      max-width: 600px
+    }
+
+    .admission p {
+      color: #cbd5e5;
+      max-width: 620px
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 28px
+    }
+
+    .contact-info,
+    .form-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      box-shadow: 0 8px 30px rgba(7, 26, 58, .04)
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 15px;
+      margin: 21px 0
+    }
+
+    .contact-row .icon {
+      flex: 0 0 45px;
+      width: 45px;
+      height: 45px;
+      margin: 0
+    }
+
+    .contact-row b {
+      display: block;
+      color: var(--navy)
+    }
+
+    .contact-row span {
+      font-size: 14px;
+      color: var(--muted)
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .field.full {
+      grid-column: 1/-1
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font: inherit;
+      outline: none;
+      background: #fbfcfe;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #9eb2d3;
+      box-shadow: 0 0 0 3px rgba(40, 85, 145, .08)
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical
+    }
+
+    .form-message {
+      grid-column: 1/-1;
+      font-size: 14px;
+      font-weight: 700;
+      display: none
+    }
+
+    /* FOOTER */
+    footer {
+      background: #041329;
+      color: #bdc8d9;
+      padding: 55px 0 25px
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 35px
+    }
+
+    footer h3 {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 15px
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px
+    }
+
+    footer a {
+      display: block;
+      margin: 9px 0;
+      transition: .2s
+    }
+
+    footer a:hover {
+      color: var(--gold)
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      margin-top: 35px;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 12px
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 10, 24, .88);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .lightbox.open {
+      display: flex
+    }
+
+    .lightbox img {
+      max-height: 85vh;
+      max-width: 92vw;
+      border-radius: 15px
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #fff;
+      background: none;
+      border: 0;
+      font-size: 38px;
+      cursor: pointer
+    }
+
+    #topBtn {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 48px;
+      height: 48px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 20px;
+      font-weight: 900;
+      cursor: pointer;
+      display: none;
+      z-index: 900;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .2)
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition: opacity .7s, transform .7s
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: none
+    }
+
+    @media(max-width:900px) {
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px 6%;
+        display: none;
+      }
+
+      .nav-links.active {
+        display: flex
+      }
+
+      .nav-links a {
+        padding: 10px
+      }
+
+      .nav-cta {
+        text-align: center
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr
+      }
+
+      .cards {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .admission {
+        flex-direction: column;
+        align-items: flex-start
+      }
+    }
+
+    @media(max-width:620px) {
+      .nav {
+        height: 68px
+      }
+
+      .nav-links {
+        top: 68px
+      }
+
+      .hero {
+        min-height: 720px;
+        padding-top: 120px
+      }
+
+      h1 {
+        letter-spacing: -2px
+      }
+
+      .hero-stats {
+        gap: 20px;
+        flex-wrap: wrap
+      }
+
+      section {
+        padding: 70px 0
+      }
+
+      .cards,
+      .features,
+      .footer-grid,
+      form {
+        grid-template-columns: 1fr
+      }
+
+      .field.full {
+        grid-column: auto
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 150px
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2
+      }
+
+      .admission {
+        padding: 35px 25px
+      }
+
+      .about-photo img {
+        height: 390px
+      }
+    }
+  </style>
+</head>
